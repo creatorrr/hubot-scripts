@@ -39,7 +39,7 @@ module.exports = (robot) ->
           # get content
           max = feed.getItemQuantity _ITEMS
           items = feed.getItems 0, max
-          hn_items += "#{item.element.title}\n#{item.element.link}" for item in items
+          hn_items += "#{item.element.title}\n#{item.element.link}\n\n" for item in items
 
           # send it off!
           msg.send hn_items or _ERR_MSG
