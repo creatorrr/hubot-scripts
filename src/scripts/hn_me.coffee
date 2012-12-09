@@ -37,7 +37,7 @@ module.exports = (robot) ->
           feed.init()
 
           # get content
-          max = feed.getItemQuantity _MAX_ITEMS
+          max = feed.getItemQuantity _ITEMS
           items = feed.getItems 0, max
           hn_items += "#{item.element.title}\n#{item.element.link}" for item in items
 
